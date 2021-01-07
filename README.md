@@ -1,5 +1,5 @@
-# BootlegCassette.jl
 
+# BootlegCassette.jl
 
 BootlegCassette.jl is a quick and dirty package that tries to mimic
 the interface of
@@ -8,10 +8,18 @@ the interface of
 hood. This isn't a great implementation, but provided you do not use
 tagging and only use `@context`, `ovderdub`, `prehook`, `posthook` and
 `recurse`, BootlegCassette.jl should work as a drop-in replacement for
-Cassette.jl. This is mostly only relevant for Julia v1.6+ where
-Cassette is broken at the time of writing.
+Cassette.jl. 
 
-BootlegCassette.jl is currently signigicantly slower than regular Cassette.jl and has a different mechanism for setting recursion barriers. Currently, it's set by default to not recurse into functions from the `Core` module and also will leave the functions `isdispatchtuple`, `eltype`, `convert`, `getproperty`, and `throw` alone. This can be modified, but it's modified in a different way from in standard non-bootleg Cassette.jl
+While Cassette.jl is functioning, this package has little or no reason
+to be used. It may be interesting for educational purposes.
+
+BootlegCassette.jl is currently signigicantly slower than regular
+Cassette.jl and has a different mechanism for setting recursion
+barriers. Currently, it's set by default to not recurse into functions
+from the `Core` module and also will leave the functions
+`isdispatchtuple`, `eltype`, `convert`, `getproperty`, and `throw`
+alone. This can be modified, but it's modified in a different way from
+in standard non-bootleg Cassette.jl
 
 ## Examples
 
