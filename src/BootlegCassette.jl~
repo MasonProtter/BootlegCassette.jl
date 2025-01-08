@@ -1,5 +1,0 @@
-module BootlegCassette
-
-greet() = print("Hello World!")
-
-end # module
